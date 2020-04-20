@@ -84,12 +84,15 @@ function buy(results) {
 
                     if (quantity <= stock) {
                         console.log("Thank you for your order. Your total is $" + total + ".");
+                        orderAgain();
                     } else {
                         console.log("Sorry! We don't have the amount requested.");
+                        orderAgain();
                     }
 
                 } else {
                     console.log("Invalid item ID. Please try again.");
+                    orderAgain();
                 }
 
 
@@ -101,14 +104,13 @@ function buy(results) {
 function orderAgain() {
 
     inquirer
-        .prompt([{
-            type: 'list',
-            name: 'orderAgain',
-            message: 'Would you like to order again?',
-            choices: ['YES', 'NO'],
-        }])
+        .prompt({
+            type: "confirm",
+            name: "orderAgain",
+            message: "Would you like to order again?"
+        })
         .then(function(answer) {
-            if (answer === "YES") {
+            if (answer.orderAgain) {
                 displayStore();
             } else {
                 console.log("Thank you for using BAMazon!");
