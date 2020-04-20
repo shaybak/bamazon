@@ -19,6 +19,7 @@ var connection = mysql.createConnection({
 // connect to the mysql server and sql database
 connection.connect(function(err) {
     if (err) throw err;
+
     // run the start function after the connection is made to prompt the user
     displayStore();
 });
@@ -97,14 +98,21 @@ function buy(results) {
                             ],
                             function(err, result) {
                                 if (err) throw err;
-                                console.log(result.affectedRows + " products updated");
+                                console.log(result.affectedRows + " product(s) updated");
                                 orderAgain();
                             });
 
 
                     } else {
-                        console.log("Sorry! We don't have the amount requested.");
-                        orderAgain();
+                        if (stock < 0) {
+                            console.log("Sorry! We don't have the amount requested. We have " + stock + " available for purchase.");
+                            orderAgain();
+
+                        } else {
+                            console.log("Sorry! That item is out of stock.");
+                            orderAgain();
+                        }
+
                     }
                 } else {
                     console.log("Invalid item ID. Please try again.");
