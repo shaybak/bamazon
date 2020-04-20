@@ -27,7 +27,7 @@ function displayStore() {
 
     connection.query("SELECT * FROM products", function(err, result) {
         if (err) throw err;
-        console.log("Here's what's for sale today:")
+        console.log("Welcome to BAMazon! Here's what's for sale today:")
         console.log("----------------------------------------------------");
         for (var i = 0; i < result.length; i++) {
 
@@ -64,6 +64,8 @@ function buy(results) {
             connection.query("SELECT * FROM products", function(err, result) {
                 if (err) throw err;
 
+                var itemID = answers.idOfObject;
+
                 var index = answers.idOfObject - 1;
 
                 var item = result[index].product_name;
@@ -84,12 +86,26 @@ function buy(results) {
 
                     if (quantity <= stock) {
                         console.log("Thank you for your order. Your total is $" + total + ".");
-                        orderAgain();
+
+                        connection.query(
+                            "UPDATE products SET ? WHERE ?", [{
+                                    stock_quantity: stock - quantity
+                                },
+                                {
+                                    item_id: itemID
+                                }
+                            ],
+                            function(err, result) {
+                                if (err) throw err;
+                                console.log(result.affectedRows + " products updated");
+                                orderAgain();
+                            });
+
+
                     } else {
                         console.log("Sorry! We don't have the amount requested.");
                         orderAgain();
                     }
-
                 } else {
                     console.log("Invalid item ID. Please try again.");
                     orderAgain();
