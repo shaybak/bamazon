@@ -62,29 +62,44 @@ function buy(results) {
 
             console.log("Checking storefront...");
 
+            // We query the database table for information
             connection.query("SELECT * FROM products", function(err, result) {
+
+                // First, handle an error if there's an error
                 if (err) throw err;
 
+
+                // Create variables to use throughout the function
+
+                // Item id chosen by customer
                 var itemID = answers.idOfObject;
 
+                // Corresponding index of item (must subtract 1 to get correct index)
                 var index = answers.idOfObject - 1;
 
+                // Corresponding name of item
                 var item = result[index].product_name;
 
+                // Quantity chosen by the customer to purchase
                 var quantity = answers.number;
 
+                // Amount of stock available
                 var stock = result[index].stock_quantity;
 
+                // Price per unit
                 var price = result[index].price;
 
+                // Calculates customer's total purchase price; this is displayed only if there is enough stock to cover the customer's order
                 var total = quantity * price;
 
+                // This section checks if the customer has entered a valid item ID
                 if (answers.idOfObject > 0 && answers.idOfObject < 11) {
 
                     console.log("You selected " + item + " [quantity: " + quantity + "]");
 
                     console.log("Checking inventory...");
 
+                    // If the customer has entered a valid item ID and the quantity requested is less than or equal to the amount in stock, the customer will get order confirmation and the total purchase price.
                     if (quantity <= stock) {
                         console.log("Thank you for your order. Your total is $" + total + ".");
 
@@ -104,16 +119,18 @@ function buy(results) {
 
 
                     } else {
+                        // If the customer has requested more than is in stock, they'll receive the message below.
                         if (stock < 0) {
-                            console.log("Sorry! We don't have the amount requested. We have " + stock + " available for purchase.");
+                            console.log("Sorry! We don't have the amount requested. We have " + stock + " unit of " + item + "available for purchase.");
                             orderAgain();
-
+                            // If the product is out of stock, the customer will receive this message.
                         } else {
                             console.log("Sorry! That item is out of stock.");
                             orderAgain();
                         }
 
                     }
+                    // If the customer enters an invalid item ID, the console will notify them and ask if they'd like to order again.
                 } else {
                     console.log("Invalid item ID. Please try again.");
                     orderAgain();
@@ -125,6 +142,8 @@ function buy(results) {
         });
 }
 
+// Inquirer confirm function that asks the customer if they want to order again.
+// The connection is terminated if they choose not to order again.
 function orderAgain() {
 
     inquirer
