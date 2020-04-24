@@ -37,9 +37,21 @@ Through the terminal, the user can:
 
 ## Functionality Demo
 
-### 1. Show the user the available products
+### 0. Initialize
 
-### 2. Ask which product the user would like to buy
+Initiate the BAMazon application in the terminal with the command "node bamazonCustomer.js" or "nodemon bamazonCustomer.js".
+
+![Initialize example](gifs/gif1-display-store.gif)
+
+### 1. Show the user the available products & ask which product the user would like to buy
+
+When the application is initiated by the user (terminal prompt "node bamazonCustomer.js" or "nodemon bamazonCustomer.js"), a welcome message and the store's available products will populate in the terminal.
+
+In this example, we'll purchase a copy of DOOM Eternal:
+
+![GIF of DOOM Eternal purchase example](assets/images/yaktocat.png)
+
+### 2. 
 
 ### 3. Ask how many units of a given product the user would like to buy
 
