@@ -1,16 +1,20 @@
 # bamazon
 
-### SUMMARY
+## SUMMARY
 This is a node-based storefront application built using Node.js and MySQL.
 
-### How does it work?
 
-##### DEV SIDE
+***
+
+
+## How does it work?
+
+#### DEV SIDE
 
 **Node.js** and **MySQL** are used in tandem to maintain and query a database of store products from BAMazon.
 
 
-##### USER SIDE
+#### USER SIDE
 
 Through the terminal, the user can:
 
