@@ -88,6 +88,11 @@ Let's use the DOOM Eternal example above again for a positive confirmation. You 
 Because there is enough inventory to fulfill this order, the console then prints a thank you message with the user's order total.
 
 NOT IN STOCK:
+In recent months, there's been a distinct dearth of toilet paper in real stores. BAMazon is also feeling the sting of consumer hoarding and disrupted supply chains.
+
+So let's try to order some toilet paper, which is just completely out of stock:
+
+![Toilet paper](gifs/gif-toilet-paper.gif)
 
 ***
 **THIRD: Verify that the product is available in the quantity the user needs.**
