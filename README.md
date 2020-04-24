@@ -73,7 +73,13 @@ The message printed after the user enters the product ID and desired quantity is
 ***
 **FIRST: Verify that the user has entered an appropriate ID that corresponds to a product.**
 
-In our DOOM Eternal example, the program checks the storefront ("Checking storefront...") for the product. It then returns the message "You selected DOOM Eternal [quantity: 1]", acknowledging that the user has entered an ID that corresponds to a product.
+In our DOOM Eternal example, the program checks the storefront for the product, printing this message:
+
+                "Checking storefront..."
+
+It then returns the following message, which acknowledges that the user has entered an ID that corresponds to a product: 
+
+                You selected DOOM Eternal [quantity: 1]
 
 ![DOOM Eternal example2](gifs/gif3-doom.gif)
 
