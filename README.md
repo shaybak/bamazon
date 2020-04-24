@@ -14,13 +14,13 @@ This is a node-based storefront application built using Node.js and MySQL.
 
 Through the terminal, the user can:
 
-    * See all products for sale, including:
-        * ID
-        * Product Name
-        * Department
-        * Unit Price
-        * Stock Quantity;
+* See all products for sale, including:
+    * ID
+    * Product Name
+    * Department
+    * Unit Price
+    * Stock Quantity;
 
-    * Purchase a product; and
+* Purchase a product; and
 
-    * Terminate the connection to the application or order again.
+* Terminate the connection to the application or order again.
