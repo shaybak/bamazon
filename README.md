@@ -77,6 +77,21 @@ In our DOOM Eternal example, the program checks the storefront ("Checking storef
 
 **SECOND: Verify that the product is in stock.**
 
+IN STOCK:
+Let's use the DOOM Eternal example above again for a positive confirmation. You can see that the console then prints ("Checking inventory..."). Because there is enough inventory to fulfill this order, the console then prints a thank you message with the user's order total.
+
+NOT IN STOCK:
+
+
 **THIRD: Verify that the product is available in the quantity the user needs.**
 
-### 
+You might be wondering how this is different from checking if the product is in stock. Well, in the DOOM Eternal example, it wasn't an issue--the user ordered one copy of the game, which was available.
+
+Here's what happens when the product is available, but not in the quantity requested:
+
+
+### Update the product listing if the purchase is successful.
+
+Let's look at our DOOM Eternal example again. If you look at the previous storefront GIFs, you'll see there were two copies in stock before the user ordered. When the user ordered, the console printed several messages, one of which included "1 product(s) updated", meaning that the stock quantity for DOOM Eternal was updated to reflect this order. Now, there's only one in stock:
+
+![DOOM Eternal example2](gifs/gif4-updated-quantity.gif)
