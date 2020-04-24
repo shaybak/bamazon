@@ -78,7 +78,11 @@ In our DOOM Eternal example, the program checks the storefront ("Checking storef
 **SECOND: Verify that the product is in stock.**
 
 IN STOCK:
-Let's use the DOOM Eternal example above again for a positive confirmation. You can see that the console then prints ("Checking inventory..."). Because there is enough inventory to fulfill this order, the console then prints a thank you message with the user's order total.
+Let's use the DOOM Eternal example above again for a positive confirmation. You can see that the console then prints the following:
+
+                Checking inventory... 
+
+Because there is enough inventory to fulfill this order, the console then prints a thank you message with the user's order total.
 
 NOT IN STOCK:
 
@@ -87,11 +91,19 @@ NOT IN STOCK:
 
 You might be wondering how this is different from checking if the product is in stock. Well, in the DOOM Eternal example, it wasn't an issue--the user ordered one copy of the game, which was available.
 
-Here's what happens when the product is available, but not in the quantity requested:
+Here's what happens when the product is available, but not in the quantity requested.
+
+Let's say I want to purchase Scarface, and I love that movie so much, I want ONE THOUSAND COPIES (I mean, who doesn't?).
 
 ![Not available in quantity](gifs/gif5-not-enough.gif)
 
-You can see that this user inquiry passes ID verification, but 
+You can see that this user inquiry passes ID verification because it's a valid product, but clearly the storefront doesn't have this many in stock. It gives the user an apology message:
+
+                Sorry! We don't have the amount requested. We have 13 unit(s) of Item: Scareface available for purchase.
+
+So essentially our application is saying here, okay, you can't have 1000, but we do at least have some stock.
+
+Armed with this knowledge, the user is then prompted to confirm if they would like to order again, and can respond accordingly.
 
 
 ### Update the product listing if the purchase is successful.

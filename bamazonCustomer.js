@@ -123,7 +123,7 @@ function buy(results) {
                     } else {
                         // If the customer has requested more than is in stock, they'll receive the message below.
                         if (stock > 0) {
-                            console.log("Sorry! We don't have the amount requested. We have " + stock + " unit of " + item + "available for purchase.");
+                            console.log("Sorry! We don't have the amount requested. We have " + stock + " unit(s) of Item: " + item + " available for purchase.");
                             orderAgain();
                             // If the product is out of stock, the customer will receive this message.
                         } else {
