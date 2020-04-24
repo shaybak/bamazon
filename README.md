@@ -54,7 +54,7 @@ nodemon bamazonCustomer.js
 
 ### Show the user the available products & ask which product the user would like to buy
 
-When the application is initiated by the user (terminal prompt "node bamazonCustomer.js" or "nodemon bamazonCustomer.js"), a welcome message and the store's available products will populate in the terminal.
+When the application is initiated by the user, a welcome message and the store's available products will populate in the terminal.
 
 In this example, we'll purchase a copy of DOOM Eternal:
 
