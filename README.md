@@ -95,7 +95,7 @@ Here's what happens when the product is available, but not in the quantity reque
 
 Let's say I want to purchase Scarface, and I love that movie so much, I want ONE THOUSAND COPIES (I mean, who doesn't?).
 
-![Not available in quantity](gifs/gif5-not-enough.gif)
+![Not available in quantity](gifs/gif5-not-enough-scarface.gif)
 
 You can see that this user inquiry passes ID verification because it's a valid product, but clearly the storefront doesn't have this many in stock. It gives the user an apology message:
 
