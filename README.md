@@ -64,17 +64,20 @@ In this example, we'll purchase a copy of DOOM Eternal:
 
 You can see that the console confirms the entry of each field, then immediately prints a message after this.
 
+***
 
 ### Verify product
 
 The message printed after the user enters the product ID and desired quantity is contingent upon certain verifications. There are three things the program will verify, which we'll look at.
 
+***
 **FIRST: Verify that the user has entered an appropriate ID that corresponds to a product.**
 
 In our DOOM Eternal example, the program checks the storefront ("Checking storefront...") for the product. It then returns the message "You selected DOOM Eternal [quantity: 1]", acknowledging that the user has entered an ID that corresponds to a product.
 
 ![DOOM Eternal example2](gifs/gif3-doom.gif)
 
+***
 **SECOND: Verify that the product is in stock.**
 
 IN STOCK:
@@ -86,7 +89,7 @@ Because there is enough inventory to fulfill this order, the console then prints
 
 NOT IN STOCK:
 
-
+***
 **THIRD: Verify that the product is available in the quantity the user needs.**
 
 You might be wondering how this is different from checking if the product is in stock. Well, in the DOOM Eternal example, it wasn't an issue--the user ordered one copy of the game, which was available.
@@ -99,13 +102,13 @@ Let's say I want to purchase Scarface, and I love that movie so much, I want ONE
 
 You can see that this user inquiry passes ID verification because it's a valid product, but clearly the storefront doesn't have this many in stock. It gives the user an apology message:
 
-                Sorry! We don't have the amount requested. We have 13 unit(s) of Item: Scareface available for purchase.
+                Sorry! We don't have the amount requested. We have 13 unit(s) of Item: Scarface available for purchase.
 
 So essentially our application is saying here, okay, you can't have 1000, but we do at least have some stock.
 
 Armed with this knowledge, the user is then prompted to confirm if they would like to order again, and can respond accordingly.
 
-
+***
 ### Update the product listing if the purchase is successful.
 
 Let's look at our DOOM Eternal example again. If you look at the previous storefront GIFs, you'll see there were two copies in stock before the user ordered. When the user ordered one copy, the console printed several messages, one of which included "1 product(s) updated", meaning that the stock quantity for DOOM Eternal was reduced by one. Since one subtracted from two is one, there's now only one copy in stock:
