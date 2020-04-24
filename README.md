@@ -89,9 +89,13 @@ You might be wondering how this is different from checking if the product is in 
 
 Here's what happens when the product is available, but not in the quantity requested:
 
+![Not available in quantity](gifs/gif5-not-enough.gif)
+
+You can see that this user inquiry passes ID verification, but 
+
 
 ### Update the product listing if the purchase is successful.
 
-Let's look at our DOOM Eternal example again. If you look at the previous storefront GIFs, you'll see there were two copies in stock before the user ordered. When the user ordered, the console printed several messages, one of which included "1 product(s) updated", meaning that the stock quantity for DOOM Eternal was updated to reflect this order. Now, there's only one in stock:
+Let's look at our DOOM Eternal example again. If you look at the previous storefront GIFs, you'll see there were two copies in stock before the user ordered. When the user ordered one copy, the console printed several messages, one of which included "1 product(s) updated", meaning that the stock quantity for DOOM Eternal was reduced by one. Since one subtracted from two is one, there's now only one copy in stock:
 
 ![DOOM Eternal example2](gifs/gif4-updated-quantity.gif)

@@ -77,23 +77,25 @@ function buy(results) {
                 // Corresponding index of item (must subtract 1 to get correct index)
                 var index = answers.idOfObject - 1;
 
-                // Corresponding name of item
-                var item = result[index].product_name;
-
                 // Quantity chosen by the customer to purchase
                 var quantity = answers.number;
 
-                // Amount of stock available
-                var stock = result[index].stock_quantity;
-
-                // Price per unit
-                var price = result[index].price;
 
                 // Calculates customer's total purchase price; this is displayed only if there is enough stock to cover the customer's order
                 var total = quantity * price;
 
                 // This section checks if the customer has entered a valid item ID
-                if (answers.idOfObject > 0 && answers.idOfObject < 11) {
+                if (itemID > 0 && itemID < 11) {
+
+                    // Corresponding name of item
+                    var item = result[index].product_name;
+
+
+                    // Amount of stock available
+                    var stock = result[index].stock_quantity;
+
+                    // Price per unit
+                    var price = result[index].price;
 
                     console.log("You selected " + item + " [quantity: " + quantity + "]");
 
@@ -120,7 +122,7 @@ function buy(results) {
 
                     } else {
                         // If the customer has requested more than is in stock, they'll receive the message below.
-                        if (stock < 0) {
+                        if (stock > 0) {
                             console.log("Sorry! We don't have the amount requested. We have " + stock + " unit of " + item + "available for purchase.");
                             orderAgain();
                             // If the product is out of stock, the customer will receive this message.
