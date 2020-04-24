@@ -39,7 +39,18 @@ Through the terminal, the user can:
 
 ### Initialize
 
-Initiate the BAMazon application in the terminal with the command "node bamazonCustomer.js" or "nodemon bamazonCustomer.js".
+Initiate the BAMazon application in the terminal with one of these commands: 
+
+```javascript
+node bamazonCustomer.js
+```
+
+
+or 
+
+```javascript
+nodemon bamazonCustomer.js
+```
 
 ![Initialize example](gifs/gif1-display-store.gif)
 
