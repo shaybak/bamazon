@@ -1,6 +1,4 @@
-# BAMazon
-
-## SUMMARY
+## BAMazon - Summary
 This is a node-based storefront application built using Node.js and MySQL.
 
 
@@ -9,14 +7,14 @@ This is a node-based storefront application built using Node.js and MySQL.
 
 ## How does it work?
 
-### DEV SIDE
+### Developer
 
 **Node.js** and **MySQL** are used in tandem to maintain and query a database of store products from BAMazon.
 
 The database is built with MySQL workbench and populated with ten products. The bamazonCustomer.js file can query and update the database as the user interacts with the application.
 
 
-### USER SIDE
+### User
 
 Through the terminal, the user can:
 
@@ -73,6 +71,7 @@ The message printed after the user enters the product ID and desired quantity is
 ***
 **FIRST: Verify that the user has entered an appropriate ID that corresponds to a product.**
 
+VALID ID:
 In our DOOM Eternal example, the program checks the storefront for the product, printing this message:
 
                 "Checking storefront..."
@@ -82,6 +81,17 @@ It then returns the following message, which acknowledges that the user has ente
                 You selected DOOM Eternal [quantity: 1]
 
 ![DOOM Eternal example2](gifs/gif3-doom.gif)
+
+INVALID ID:
+Here's an example of what happens if the user enters an invalid ID:
+
+![Invalid ID](gifs/invalid.gif)
+
+If the user enters an invalid ID, they'll be given the following message:
+
+                Invalid item ID. Please try again.
+
+The user is then prompted to confirm if they would like to attempt the order again.
 
 ***
 **SECOND: Verify that the product is in stock.**
@@ -125,3 +135,14 @@ Armed with this knowledge, the user is then prompted to confirm if they would li
 Let's look at our DOOM Eternal example again. If you look at the previous storefront GIFs, you'll see there were two copies in stock before the user ordered. When the user ordered one copy, the console printed several messages, one of which included "1 product(s) updated", meaning that the stock quantity for DOOM Eternal was reduced by one. Since one subtracted from two is one, there's now only one copy in stock:
 
 ![DOOM Eternal example2](gifs/gif4-updated-quantity.gif)
+
+***
+### Order again?
+
+As you've seen in a few of these examples, the user is asked if they'd like to order again once a transaction is completed or if there's an error in processing.
+
+If the user decides to order again, they will be shown the storefront, which will be updated if they've made any purchases that affected the stock quantity of the items.
+
+If the user does not decide to order again, they'll be thanked for using the service and the connection to the store database will be closed, as in this example:
+
+![Don't order again](gifs/terminate.gif)
