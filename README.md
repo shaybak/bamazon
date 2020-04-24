@@ -37,13 +37,13 @@ Through the terminal, the user can:
 
 ## Functionality Demo
 
-### 0. Initialize
+### Initialize
 
 Initiate the BAMazon application in the terminal with the command "node bamazonCustomer.js" or "nodemon bamazonCustomer.js".
 
 ![Initialize example](gifs/gif1-display-store.gif)
 
-### 1. Show the user the available products & ask which product the user would like to buy
+### Show the user the available products & ask which product the user would like to buy
 
 When the application is initiated by the user (terminal prompt "node bamazonCustomer.js" or "nodemon bamazonCustomer.js"), a welcome message and the store's available products will populate in the terminal.
 
@@ -51,18 +51,21 @@ In this example, we'll purchase a copy of DOOM Eternal:
 
 ![DOOM Eternal example](gifs/gif2-doom.gif)
 
-### 2. 
+You can see that the console confirms the entry of each field, then immediately prints a message after this.
 
-### 3. Ask how many units of a given product the user would like to buy
 
 ### 4. Verify product
 
-There are three things the program will verify:
+The message printed after the user enters the product ID and desired quantity is contingent upon certain verifications. There are three things the program will verify, which we'll look at.
 
 1. Verify that the user has entered an appropriate ID that corresponds to a product.
+
+In our DOOM Eternal example, the program checks the storefront ("Checking storefront...") for the product. It then returns the message "You selected DOOM Eternal [quantity: 1]", acknowledging that the user has entered an ID that corresponds to a product.
+
+![DOOM Eternal example2](gifs/gif3-doom.gif)
 
 2. Verify that the product is in stock.
 
 3. Verify that the product is available in the quantity the user needs.
 
-### 5. Ask which product the user would like to buy
+### 
