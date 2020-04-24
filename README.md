@@ -49,7 +49,7 @@ When the application is initiated by the user (terminal prompt "node bamazonCust
 
 In this example, we'll purchase a copy of DOOM Eternal:
 
-![GIF of DOOM Eternal purchase example](assets/images/yaktocat.png)
+![DOOM Eternal example](gifs/gif2-doom.gif)
 
 ### 2. 
 
